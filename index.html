@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="/js/scrollSpeed.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- HEADER S -->
+  <div class="header">
+    <div class="container-1440 flex jcsb aic">
+      <a href="/" class="logo_wrap">
+        <span class="blind">웰하이여성아동병원</span>
+      </a>
+      <nav class="nav">
+        <ul class="depth01">
+          <li>
+            <a href="#" class="unlink-mo" data-link="#">웰하이클리닉
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="#">추나요법</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="unlink-mo" data-link="#">하이푸클리닉
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="#">목/허리통증</a></li>
+              <li><a href="#">무릎통증</a></li>
+              <li><a href="#">어깨통증</a></li>
+              <li><a href="#">팔/팔(손)목 통증</a></li>
+              <li><a href="#">발/발목 통증</a></li>
+              <li><a href="#">턱관절 및 안면비대칭</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="unlink-mo" data-link="/#">여성클리닉
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="/#">담적질환</a></li>
+              <li><a href="/#">신경성질환</a></li>
+              <li><a href="/#">자가면역질환</a></li>
+              <li><a href="/#">과민성대장증후군</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="unlink-mo" data-link="#">내과클리닉
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="#">부인과질환</a></li>
+              <li><a href="#">배뇨장애</a></li>
+              <li><a href="#">갱년기장애</a></li>
+              <li><a href="#">소아성장</a></li>
+              <li><a href="#">소아면역 및 피부</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="unlink-mo" data-link="#">우리아이건강클리닉
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="#">교통사고후유증치료</a></li>
+              <!-- <li><a href="#">기능의학</a></li>
+              <li><a href="#">금연</a></li>
+              <li><a href="#">비만</a></li>
+              <li><a href="#">탈모</a></li> -->
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="unlink-mo" data-link="/intro-01">건강검진센터
+              <span class="icon_wrap visible-xs">
+                <img src="/img/main/close_one.svg" alt="" class="close_one">
+                <img src="/img/main/open_one.svg" alt="" class="open_one">
+              </span>
+            </a>
+            <ul class="depth02">
+              <li><a href="/intro-01">의료진소개</a></li>
+              <li><a href="/intro-02">진료시간/오시는길</a></li>
+              <li><a href="javascript:alert('준비중입니다.');" onfocus="this.blur()">둘러보기</a></li>
+              <li><a href="/community/notice" target="_blank">병원소식</a></li>
+              <li><a href="/pay" target="_blank">비급여안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav_bg"></div>
+      <div class="gnb_all_btn visible-xs">
+        <a href="#">
+          <img src="/img/main/gnb_btn.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER E -->
+  <script>
+    $('.nav').on('mouseenter', function(){
+      if ($(window).width() > 768){
+        $(this).addClass('on');
+        $('.nav_bg').stop().slideDown(350);
+      }
+      });
+    $('.header').on('mouseleave', function(){
+      $('.nav').removeClass('on');
+      $('.nav_bg').stop().slideUp(350);
+    });
+    $('.gnb_all_btn').on('click', function(e){
+      e.preventDefault();
+      $('.nav').toggleClass('active');
+      if ($('.nav').hasClass('active')){
+        $('html, body').css({'overflow':'hidden'});
+      } else{
+        $('html, body').css({'overflow':'visible'});
+      }
+    });
+
+    $(window).resize(function(){
+      if ( $(window).width() < 1281 ){
+        $('.unlink-mo').attr('href','#');
+      } else {
+        $('.unlink-mo').each(function(){
+          var originurl = $(this).attr('data-link');
+          $(this).attr('href',originurl);
+        })
+      }
+    }).resize();
+
+    $('.depth01 > li > a').on('click', function(e){
+      if ( $(this).attr('href') == "#"){
+        e.preventDefault();
+        $(this).parent().siblings().find('.depth02').stop().slideUp();
+        $(this).siblings().stop().slideDown();
+        $(this).toggleClass('pop').parent().siblings().children().removeClass('pop');
+      }
+    });
+    $('.depth02 a').on('click', function(){
+      $('.nav').removeClass('active');
+    });
+
+
+  </script>
+
+  <div class="main">
+    <div class="container_wrapper">
+
+      <div class="swiper swiper-container" id="main">
+        <div class="swiper-wrapper">
+
+          <!-- 메인 비주얼 시작 -->
+          <div class="swiper-slide">
+            <div class="sec01 sec">
+
+              <div class="swiper main_visual">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mainslide " data-swiper-autoplay="27000">
+                    <div class="w-1400">
+                      <h2 class="h1 fcfff wbk">
+                        여성이 행복해지는 <br>웰하이여성병원
+                      </h2>
+                      <p class="fcfff h4 wbk">웰하이여성아동병원은 <br> 20년간 쌓아온 노하우를 바탕으로
+                        <br>여성의 행복함을 찾기위해 노력하고 있습니다.</p>
+                      <a href="" class="h5 fcfff">VIEW MORE</a>
+                    </div>
+                    <video autoplay loop muted preload="auto">
+                      <source src="/img/main/mainslide_video.mp4">
+                    </video>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <!-- <div class="main_visual">
+                <video>
+                  <source url="/img/main/mainslide_video.mp4" muted autoplay loop preload="auto">
+                </video>
+              </div> -->
+              
+
+            </div>
+          </div>
+          <script>
+            var swiper = new Swiper(".main_visual", {
+              spaceBetween: 0,
+              centeredSlides: true,
+              // loop : true,
+              speed : 3000,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
+          
+          <!-- 메인 비주얼 끝 -->
+
+          <!-- 진료과목 시작 -->
+          <div class="swiper-slide">
+            <div class="sec02 sec">
+              <div class="depart">
+                <ul>
+                  <li>
+                    <div class="txt_con">
+                      <h2 class="h2">산과</h2>
+                      <p class="h4">결혼, 임신, 분만, 폐경, 불임
+                        <br>모든 과정을 전문적인 진료와 치료</p>
+                      <a href="#" class="h5">VIEW MORE</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_con">
+                      <h2 class="h2">부인과</h2>
+                      <p class="h4">결혼, 임신, 분만, 폐경, 불임
+                        <br>모든 과정을 전문적인 진료와 치료</p>
+                      <a href="#" class="h5">VIEW MORE</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_con">
+                      <h2 class="h2">건강검진센터</h2>
+                      <p class="h4">5대암 검진, 종합검진,
+                        <br>웰하이 종합검진</p>
+                      <a href="#" class="h5">VIEW MORE</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="txt_con">
+                      <h2 class="h2">소아청소년과</h2>
+                      <p class="h4">영유아검진, 청소년클리닉,
+                        <br>신생아질환, 육아상담</p>
+                      <a href="#" class="h5">VIEW MORE</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 진료과목 끝 -->
+
+          <!-- 이미지배너 시작 -->
+          <!-- <div class="swiper-slide">
+            <div class="sec03 sec">
+                <div class="swiper img_banner">
+                  <div class="swiper-wrapper banner_wrapper">
+                    <div class="swiper-slide banner_slides">
+                      <div class="txt">
+                        <div class="con">
+                          <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                          <p class="h5">
+                            수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                            <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                            <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                            <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                            <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="img_wrap">
+                        <img src="/img/main/banner_01.png" alt="">
+                      </div>
+                      <div class="view_more">
+                        <a href="" class="h5">VIEW MORE</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide banner_slides">
+                      <div class="txt">
+                        <div class="con">
+                          <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                          <p class="h5">
+                            수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                            <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                            <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                            <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                            <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="img_wrap">
+                        <img src="/img/main/banner_01.png" alt="">
+                      </div>
+                      <div class="view_more">
+                        <a href="" class="h5">VIEW MORE</a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide banner_slides">
+                      <div class="txt">
+                        <div class="con">
+                          <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                          <p class="h5">
+                            수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                            <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                            <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                            <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                            <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="img_wrap">
+                        <img src="/img/main/banner_01.png" alt="">
+                      </div>
+                      <div class="view_more">
+                        <a href="" class="h5">VIEW MORE</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination-clickable swiper-pagination-bullets" id="banner_nav">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            var nav = ['자연주의분만', '캥거루케어', '르봐이예분만']
+            var swiper = new Swiper(".img_banner", {
+              slidePerView : 'auto',
+              spaceBetween : 0,
+              // horizontal : true,
+              autoplay : {
+                disableOnInteraction: false,
+              },
+              delay : 3000,
+              speed : 2000,
+              loop : true,
+              slideActiveClass : 'active',
+              pagination: {
+                el: "#banner_nav",
+                bulletActiveClass : 'on',
+                clickable: true,
+                renderBullet: function (index, className) {
+                return '<p class="wbk ' + className + '"><span>' + (nav[index]) + '</span></p>';
+              },
+            },
+          });
+        </script> -->
+          <!-- 이미지배너 끝 -->
+
+        <!-- 이미지배너 테스트 -->
+        <div class="swiper-slide">
+          <div class="sec03 sec flex_box">
+            <div class="swiper left_slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="con">
+                    <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                    <p class="h5">
+                      수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                      <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                      <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                      <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                      <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="con">
+                    <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                    <p class="h5">
+                      수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                      <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                      <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                      <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                      <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="con">
+                    <h2 class="h2">여성의 건강과<br>고귀한 탄생을 위해</h2>
+                    <p class="h5">
+                      수고로운 여정을 거쳐서 새로운 세상으로 나오는 아기에게
+                      <br>스트레스 없는 분만을 위해 자연주의적인 방법으로
+                      <br>분만 진행을 도와드리며, 최소 회음절개로 엄마의 미용까지 생각합니다.
+                      <br>자연적이며, 긍정적인 과정으로 진행되는 분만은
+                      <br>엄마와 아기에게 축복된 경험이 될 것 입니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination" id="left_slide_nav"></div>
+            </div>
+            <div class="swiper right_slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/img/main/banner_01.png" alt="">
+                  <!-- <div class="view_more">
+                    <a href="#">VIEW MORE</a>
+                  </div> -->
+                </div>
+                <div class="swiper-slide">
+                  <img src="/img/main/banner_02.jpg" alt="">
+                  <!-- <div class="view_more">
+                    <a href="#">VIEW MORE</a>
+                  </div> -->
+                </div>
+                <div class="swiper-slide">
+                  <img src="/img/main/banner_03.jpg" alt="">
+                  <!-- <div class="view_more">
+                    <a href="#">VIEW MORE</a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="view_more">
+              <a href="#">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+        <script>
+          var swiper = new Swiper(".right_slide", {
+            effect: 'fade',
+            delay : 2000,
+            speed : 2000,
+            spaceBetween: 10,
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var nav = ['자연주의분만', '캥거루케어', '르봐이예분만']
+            var swiper = new Swiper(".left_slide", {
+              effect: 'fade',
+              slidePerView : 'auto',
+              spaceBetween: 10,
+              // horizontal : true,
+              autoplay : {
+                disableOnInteraction: false,
+              },
+              // delay : 3000,
+              speed : 2000,
+              loop : true,
+              slideActiveClass : 'active',
+              pagination: {
+                el: "#left_slide_nav",
+                bulletActiveClass : 'on',
+                clickable: true,
+                renderBullet: function (index, className) {
+                return '<p class="wbk ' + className + '"><span>' + (nav[index]) + '</span></p>';
+              },
+            },
+            thumbs: {
+              swiper: swiper,
+            },
+          });
+          
+        </script>
+        <!-- 이미지배너 테스트끝 -->
+
+
+          <!-- 진료시간 안내 시작 -->
+          <div class="swiper-slide">
+            <div class="sec04 sec">
+              <div class="time">
+                <div class="w-1400">
+                  <div class="map">
+                    <div class="" id="map"></div>
+                    <div class="location">
+                      <p class="h5">
+                        <span class="img_wrap">
+                          <img src="/img/main/icon_location.png" alt="">
+                        </span>
+                        LOCATION
+                      </p>
+                      <p class="h5 wbk">부산 강서구 명지오션시티4로 95 웰하이여성아동병원</p>
+                    </div>
+                  </div>
+                  <div class="time_table">
+                    <h2 class="h2">진료시간 안내</h2>
+                    <div class="" id="tabs">
+                      <ul class="tab_menu">
+                        <li class="active"><a href="#tabs-1" class="h5 active">산부인과</a>
+                          <div class="img_wrap">
+                            <img src="/img/main/tab_on.png" alt="">
+                          </div>
+                        </li>
+                        <li><a href="#tabs-2" class="h5">내과</a>
+                          <div class="img_wrap">
+                            <img src="/img/main/tab_on.png" alt="">
+                          </div></li>
+                        <li><a href="#tabs-3" class="h5">소아청소년과</a>
+                          <div class="img_wrap">
+                            <img src="/img/main/tab_on.png" alt="">
+                          </div></li>
+                      </ul>
+                      <div class="tab_content active" >
+                        <ul>
+                          <li>
+                            <p class="h5">평일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 05:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">평일(야간)</p>
+                            <p class="h5-s">오후 05:00 ~ 오후 07:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">토요일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 01:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">토요일(당직)</p>
+                            <p class="h5-s">오후 01:00 ~ 오후 03:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">일ㆍ공휴일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 01:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">점심시간</p>
+                            <p class="h5-s">오후 12:30 ~ 오후 01:30</p>
+                          </li>
+                        </ul>
+                        <p class="h5 mt20">
+                          24시간 산부인과 전문의 당직 중이오니, 
+                          <br>응급ㆍ분만시에는 5층 분만실을 <br class="visible-xs">이용해주시기 바랍니다.
+                        </p>
+                      </div>
+                      <div class="tab_content" >
+                        <ul>
+                          <li>
+                            <p class="h5">평일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 05:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">수요일ㆍ토요일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 01:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">점심시간</p>
+                            <p class="h5-s">오후 12:30 ~ 오후 01:30</p>
+                          </li>
+                        </ul>
+                        <p class="h5 mt20">매주 수요일 오전진료</p>
+                      </div>
+                      <div class="tab_content" >
+                        <ul>
+                          <li>
+                            <p class="h5">평일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 05:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">목요일ㆍ토요일</p>
+                            <p class="h5-s">오전 09:00 ~ 오후 01:00</p>
+                          </li>
+                          <li>
+                            <p class="h5">점심시간</p>
+                            <p class="h5-s">오후 12:00 ~ 오후 01:30</p>
+                          </li> 
+                        </ul>
+                        <p class="h5 mt20">매주 목요일 오전진료</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="call">
+                    <div class="img_wrap">
+                      <img src="/img/main/icon_phone_white.png" alt="">
+                    </div>
+                    <p class="h2">대표번호</p>
+                    <p class="h2">051.201.8854</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+              $('.tab_menu li').on('click',function(){
+              var $idx = $(this).index();
+              $('.tab_menu li').removeClass('active');
+              $(this).addClass('active');
+              $('.tab_content').removeClass('active');
+              $('.tab_content').eq($idx).addClass('active');
+            });
+          </script>
+          <!-- 진료시간 안내 끝 -->
+
+          <!-- 웰하이 시작 -->
+          <div class="swiper-slide">
+            <div class="sec05 sec">
+              <div class="intro">
+                <h1 class="h2">웰하이소개</h1>
+                <div class="w-1400">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <span class="icon">
+                          <div class="img_wrap">
+                            <img src="/img/main/icon_hospital_black.png" alt="" class="basic">
+                            <img src="/img/main/icon_hospital_white.png" alt="" class="hover">
+                          </div>
+                        </span>
+                        <p class="h5">병원소개·인사말</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="icon">
+                          <div class="img_wrap">
+                            <img src="/img/main/icon_list_black.png" alt="" class="basic">
+                            <img src="img/main/icon_list_white.png" alt="" class="hover">
+                          </div>
+                        </span>
+                        <p class="h5">공지사항</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="icon">
+                          <div class="img_wrap">
+                            <img src="/img/main/icon_commu_black.png" alt="" class="basic">
+                            <img src="/img/main/icon_commu_white.png" alt="" class="hover">
+                          </div>
+                        </span>
+                        <p class="h5">웰하이이야기</p>
+                      </a>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 웰하이 끝 -->
+
+          <!-- 푸터 시작 -->
+          <div class="swiper-slide" id="footer">
+            <div class="footer">
+              <div class="w-1400 flex_box">
+                <div class="box01">
+                  <ul>
+                    <li>
+                      <a href="" class="h5-b purple">개인정보 취급방침</a>
+                    </li>
+                    <li>
+                      <a href="" class="h5">이용약관</a>
+                    </li>
+                    <li>
+                      <a href="" class="h5">환자의 권리와 의무</a>
+                    </li>
+                    <li>
+                      <a href="" class="h5">비급여안내</a>
+                    </li>
+                    <li>
+                      <a href="" class="h5">사이트맵</a>
+                    </li>
+                    <li>
+                      <a href="" class="h5">관리자</a>
+                    </li>
+                  </ul>
+                  <div class="con">
+                    <p class="h5">부산광역시 강서구 명지동 3240-5번지(명지오션시티)</p>
+                    <p>
+                      <span class="h5 pr-20"><b class="h5-b">사업자등록번호</b>165-91-00571</span>
+                      <span class="h5 pr-20"><b class="h5-b">대표원장</b>김동영</span>
+                      <span class="h5 pr-20 wbk"><b class="h5-b">개인정보관리책임자</b>김동영</span>
+                    
+                      <span class="h5 pr-20 wbk"><b class="h5-b wbk">대표번호</b>051-201-8854 </span>
+                      <span class="h5 pr-20 wbk"><b class="h5-b wbk">산후조리원</b>051-204-5282</span>
+                      <span class="h5 wbk"><b class="h5-b wbk">팩스번호</b>051-201-6236</span>
+                    </p>
+                  </div>
+                  <p class="h5 copyright">COPYRIGHT ⓒ 2022WELLHIGH WOMEN'S HOSPITAL RESERVED.</p>
+                </div>
+                <div class="box02">
+                  <div class="img_wrap">
+                    <img src="/img/main/logo_color.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 푸터 끝 -->
+
+        </div>
+      </div>
+
+      <div id="index_nav"></div>
+
+      <script>
+          var nav = ['메인', '진료과목', '특별함','진료시간', '웰하이소개', '']
+          var swiper = new Swiper("#main", {
+            direction : "vertical",
+            autoHeight : true,
+            slidesPerView : 'auto',
+            spaceBetween : 0,
+            speed : 600,
+            mousewheel: true,
+            slideActiveClass : 'active',
+            allowTouchMove : true,
+            pagination: {
+              el: "#index_nav",
+              bulletActiveClass : 'on',
+              clickable: true,
+              renderBullet: function (index, className) {
+              return '<p class="' + className + '"><span>' + (nav[index]) + '</span></p>';
+            },
+          },
+          });
+      </script>
+
+
+    
+
+    </div>
+  </div>
+
+  <script>
+    // if ($(window).width() <= 768){
+    //   $('#main').removeClass('swiper').removeClass('swiper-container')
+    //   .children('div').removeClass('swiper-wrapper')
+    //   .children('div').removeClass('swiper-slide');
+    // }
+  </script>
+</body>
+</html>
+
+
