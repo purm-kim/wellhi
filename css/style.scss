@@ -540,6 +540,9 @@ $gray02 : #f8f8f8;
       font-weight: 700;
       transition: all 0.3s;
       text-align: right;
+      @include mq(mobile){
+        display: none;
+      }
     }
     &.on{
       background-color: #fff;
@@ -666,7 +669,7 @@ $gray02 : #f8f8f8;
       height: 120%;
       width: 110%;
       color: $white;
-      transition: all .6s .2s, height .3s 0s;
+      transition: all .3s .2s, height .3s 0s;
       .txt_con{
         display: flex;
         position: absolute;
@@ -774,6 +777,7 @@ $gray02 : #f8f8f8;
 
 //이미지배너
 .sec03{
+  height: 100vh;
   position: relative;
   background: url(/img/main/banner_bg.jpg) no-repeat left top / contain;
   @include mq(mobile){
@@ -1278,8 +1282,6 @@ $gray02 : #f8f8f8;
   }
 }
 
-
-
 //웰하이 소개
 .intro{
   height: 100vh !important;
@@ -1453,6 +1455,9 @@ $gray02 : #f8f8f8;
     }
   }
 }
+
+
+
 
 .mt10{
   margin-top: 10rem;

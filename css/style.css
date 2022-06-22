@@ -628,6 +628,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+@media (max-width: 768px) {
+  #index_nav p span {
+    display: none;
+  }
+}
+
 #index_nav p.on {
   background-color: #fff;
 }
@@ -763,8 +769,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 120%;
   width: 110%;
   color: #fff;
-  -webkit-transition: all .6s .2s, height .3s 0s;
-  transition: all .6s .2s, height .3s 0s;
+  -webkit-transition: all .3s .2s, height .3s 0s;
+  transition: all .3s .2s, height .3s 0s;
 }
 
 .depart ul li .txt_con {
@@ -890,6 +896,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sec03 {
+  height: 100vh;
   position: relative;
   background: url(/img/main/banner_bg.jpg) no-repeat left top/contain;
 }
