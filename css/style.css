@@ -247,6 +247,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .sec {
+    height: auto;
+  }
+}
+
 .w-1400 {
   margin: 0 auto;
   width: 1400rem;
@@ -1215,7 +1221,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 20;
+  z-index: 1;
   width: 200rem;
   height: 200rem;
   background-color: #6C1F7E;
@@ -1332,6 +1338,12 @@ h1, h2, h3, h4, h5, h6 {
   background: url(/img/main/timetable_bg.jpg) no-repeat center center/cover;
 }
 
+@media (max-width: 768px) {
+  .time {
+    height: auto;
+  }
+}
+
 .time .w-1400 {
   position: absolute;
   top: 52%;
@@ -1349,6 +1361,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .time .w-1400 {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
     padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1378,8 +1393,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .time .w-1400 .map #map {
-    height: 250rem;
-    display: none;
+    height: 350rem;
   }
 }
 

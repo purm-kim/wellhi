@@ -711,25 +711,65 @@
       <div id="index_nav"></div>
 
       <script>
-          var nav = ['', '', '','', '', '']
-          var swiper = new Swiper("#main", {
-            direction : "vertical",
-            autoHeight : true,
-            slidesPerView : 'auto',
-            spaceBetween : 0,
-            speed : 600,
-            mousewheel: true,
-            slideActiveClass : 'active',
-            allowTouchMove : true,
-            pagination: {
-              el: "#index_nav",
-              bulletActiveClass : 'on',
-              clickable: true,
-              renderBullet: function (index, className) {
-              return '<p class="' + className + '"><span>' + (nav[index]) + '</span></p>';
+
+          if ($(window).width() > 768){
+            var nav = ['', '', '','', '', '']
+            var swiper = new Swiper("#main", {
+              direction : "vertical",
+              autoHeight : true,
+              slidesPerView : 'auto',
+              spaceBetween : 0,
+              speed : 600,
+              mousewheel: true,
+              slideActiveClass : 'active',
+              allowTouchMove : true,
+              pagination: {
+                el: "#index_nav",
+                bulletActiveClass : 'on',
+                clickable: true,
+                renderBullet: function (index, className) {
+                return '<p class="' + className + '"><span>' + (nav[index]) + '</span></p>';
+              },
             },
-          },
           });
+          } else {
+            $('#main').removeClass('swiper').removeClass('swiper-container')
+            .children('div').removeClass('swiper-wrapper')
+            .children('div').removeClass('swiper-slide');
+          }
+
+          var resizeDelay = 500;
+          var timer = null;
+
+          $(window).on('resize', function(){
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+              if ($(window).width() > 768){
+                location.reload();
+              }
+            }, delay);
+          });
+
+
+          // var nav = ['', '', '','', '', '']
+          // var swiper = new Swiper("#main", {
+          //   direction : "vertical",
+          //   autoHeight : true,
+          //   slidesPerView : 'auto',
+          //   spaceBetween : 0,
+          //   speed : 600,
+          //   mousewheel: true,
+          //   slideActiveClass : 'active',
+          //   allowTouchMove : true,
+          //   pagination: {
+          //     el: "#index_nav",
+          //     bulletActiveClass : 'on',
+          //     clickable: true,
+          //     renderBullet: function (index, className) {
+          //     return '<p class="' + className + '"><span>' + (nav[index]) + '</span></p>';
+          //   },
+          // },
+          // });
       </script>
 
 
